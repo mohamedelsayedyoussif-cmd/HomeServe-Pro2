@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
@@ -7,42 +6,34 @@
     <title>HomeServe Pro | فنيين محترفين لبيتك</title>
     <meta name="description" content="احجز أفضل الفنيين في مصر للسباكة والكهرباء والتكييف. جودة مضمونة، أسعار شفافة، وخدمة طوارئ 24/7." />
     <meta name="keywords" content="صيانة منزلية، سباك، كهربائي، تكييف، تنظيف، نجار، دهانات، مصر، خدمات منزلية" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Cairo', sans-serif;
-        scroll-behavior: smooth;
+    <!-- استخدام Tailwind عبر CDN للرجوع عن الإعدادات المعقدة للبناء المحلي -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#1e40af',
+                dark: '#1e3a8a',
+              },
+              secondary: {
+                DEFAULT: '#f97316',
+                dark: '#ea580c',
+              },
+              accent: '#10b981',
+            },
+            fontFamily: {
+              cairo: ['Cairo', 'sans-serif'],
+            }
+          }
+        }
       }
-      .glass {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-      }
-      .gradient-bg {
-        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      }
-      @keyframes float {
-        0% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-20px) rotate(5deg); }
-        100% { transform: translateY(0px) rotate(0deg); }
-      }
-      @keyframes shake {
-        0%, 100% { transform: rotate(0deg); }
-        25% { transform: rotate(10deg); }
-        75% { transform: rotate(-10deg); }
-      }
-      .floating {
-        animation: float 6s ease-in-out infinite;
-      }
-      .animate-shake {
-        animation: shake 0.3s ease-in-out infinite;
-      }
-    </style>
-  <script type="importmap">
+    </script>
+    <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.4",
@@ -53,7 +44,8 @@
 }
 </script>
 </head>
-  <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+  <body>
     <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
   </body>
 </html>
