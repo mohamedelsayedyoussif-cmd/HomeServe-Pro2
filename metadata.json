@@ -1,0 +1,7 @@
+{
+  "name": "HomeServe Pro - خدمات منزلية ذكية",
+  "description": "منصة حجز الخدمات المنزلية الأسرع والأكثر موثوقية في مصر. سباكة، كهرباء، تكييف، وأكثر بضغطة زر.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
