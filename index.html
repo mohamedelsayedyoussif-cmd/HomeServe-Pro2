@@ -3,15 +3,19 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomeServe Pro | فنيين محترفين لبيتك</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>HomeServe Pro | خدمات منزلية احترافية في مصر</title>
     <meta name="description" content="احجز أفضل الفنيين في مصر للسباكة والكهرباء والتكييف. جودة مضمونة، أسعار شفافة، وخدمة طوارئ 24/7." />
     <meta name="keywords" content="صيانة منزلية، سباك، كهربائي، تكييف، تنظيف، نجار، دهانات، مصر، خدمات منزلية" />
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="/styles.css">
-    <!-- استخدام Tailwind عبر CDN للرجوع عن الإعدادات المعقدة للبناء المحلي -->
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -30,12 +34,22 @@
             },
             fontFamily: {
               cairo: ['Cairo', 'sans-serif'],
+            },
+            screens: {
+              'xs': '480px',
             }
           }
         }
       }
     </script>
-<script type="importmap">
+    <style type="text/css">
+      /* تحسينات إضافية للتجاوب السلس */
+      @media (max-width: 640px) {
+        .hero-title { font-size: 2.5rem !important; line-height: 1.2 !important; }
+      }
+      * { -webkit-tap-highlight-color: transparent; }
+    </style>
+  <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.4",
@@ -48,7 +62,7 @@
 }
 </script>
 </head>
-  <body>
+  <body class="font-cairo antialiased">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
